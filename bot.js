@@ -10,28 +10,28 @@ client.on('message', message => {
       
   if (message.content.startsWith(adminprefix + 'setg')) {
     client.user.setGame(argresult);
-      message.channel.send(`**✅   ${argresult}**`)
+      message.channel.send(`**Now PLaying ${argresult}**`)
   } else 
      if (message.content === (adminprefix + "leave")) {
     message.guild.leave();        
   } else  
-  if (message.content.startsWith(adminprefix + 'setw')) {
+  if (message.content.startsWith(adminprefix + 'sw')) {
   client.user.setActivity(argresult, {type:'WATCHING'});
       message.channel.send(`**Now Watching ${argresult}**`)
   } else 
-  if (message.content.startsWith(adminprefix + 'setl')) {
+  if (message.content.startsWith(adminprefix + 'sl')) {
   client.user.setActivity(argresult , {type:'LISTENING'});
       message.channel.send(`**Now Listening ${argresult}**`)
   } else 
-  if (message.content.startsWith(adminprefix + 'sets')) {
+  if (message.content.startsWith(adminprefix + 'st')) {
     client.user.setGame(argresult, "https://www.twitch.tv/dream");
       message.channel.send(`**Now Streaming${argresult}**`)
   }
-  if (message.content.startsWith(adminprefix + 'setname')) {
+  if (message.content.startsWith(adminprefix + 'sn')) {
   client.user.setUsername(argresult).then
       message.channel.send(`Changing The Name To ..**${argresult}** `)
 } else
-if (message.content.startsWith(adminprefix + 'setava')) {
+if (message.content.startsWith(adminprefix + 'sa')) {
   client.user.setAvatar(argresult);
     message.channel.send(`Changing The Avatar To :**${argresult}** `);
 }
